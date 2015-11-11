@@ -1,0 +1,22 @@
+{:app {:project {{raw-name}}
+       :version "0.1.0"
+       :description "FIXME: write description"
+       :url "http://example.com/FIXME"
+       :license {:name "Eclipse Public License"
+                 :url "http://www.eclipse.org/legal/epl-v10.html"}}
+ :dependencies [[org.clojure/clojure "1.8.0-RC1"]]
+ :dev-dependencies []
+ :repositories {"central" {:url "https://repo1.maven.org/maven2/"
+                           :snapshots false}
+                "clojars" {:url "https://clojars.org/repo/"}
+                "sonatype-experimental" {:url "https://oss.sonatype.org/content/groups/public/"}}
+ :deps-settings {} ;; This is anything that can be passed to pomegranate's `resolve-dependencies`
+
+ :source-paths ["src"]
+ :resource-paths ["resources"]
+ :test-paths ["test"]
+ ;; Optional: Any external tooling that needs to be configured along dep resolution
+ ;:external {:nrepl-options {:bind "127.0.0.1"
+ ;                           :reply true}}
+ }
+

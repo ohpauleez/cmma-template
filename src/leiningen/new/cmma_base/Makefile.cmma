@@ -1,0 +1,23 @@
+
+# Please see the `examples` directory for using cmma with Lein or Maven
+
+# Uncomment this for a caching classpath.
+# Note: You'll need to run `classpath` first to cache the classpath, before other commands like `repl`
+#.classpath.cmma: project.edn
+#	@echo $(call cmmaclasspath) > .classpath.cmma
+#
+#classpath: .classpath.cmma
+#	@echo $(shell cat .classpath.cmma)
+#
+#CMMA_CLASSPATH_BIN := cat .classpath.cmma
+
+
+# Let's suppose you only want to compile certain namespaces
+# If you don't specify namespaces, cmma will compile all of them
+#CMMA_COMPILE_NSES = {{namespace}}.core
+
+
+.PHONY : testtarget
+testtarget:
+	@echo $(CMMA_CLJ)
+
