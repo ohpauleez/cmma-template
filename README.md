@@ -6,7 +6,7 @@ A Leiningen template for CMMA-based projects.
 
 Install by hand with: `lein install`
 
-Create new CMMA-based projects with `lein new cmma-base myproject`
+Create new [CMMA-based](https://github.com/ohpauleez/cmma) projects with `lein new cmma-base myproject`
 
 Then you should be able to `make repl` from within the new project.
 
