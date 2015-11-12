@@ -24,7 +24,7 @@ This template also ships with Docker and OSv support.
 | Launch a REPL          | `make repl`    |  `lein dumbrepl` |              |
 | Launch a Socket REPL   | `make srepl`   |                  |              |
 | Launch a SREPL Client  | `make srepl-client`   |           |              |
-| Launch nREPL           | `make nrepl`   |  `lein repl`     | `boot nrepl` |
+| Launch nREPL           | `make nrepl`   |  `lein repl`     | `boot repl`  |
 | Run tests              | Use Repl       |  `lein test`     | `boot test`  |
 | Build a deployable JAR | Use Java tools |  `lein build`    | `boot build` |
 | Compile Clojure files  | `make compile` |  `lein compile`  | `boot test`  |
