@@ -8,7 +8,8 @@ The generated project uses Make and [CMMA](https://github.com/ohpauleez/cmma).
 You can optionally use Boot or Leiningen, both fed from the shared `project.edn` file.
 
 You can redefine CMMA's behaviors (compilation, running namespaces, etc.) with
-environment variables, or redefining the Makefile variables (in either `Makefile` or `Makefile.cmma`)
+environment variables, or redefining the Makefile variables (in either `Makefile` or `Makefile.cmma`).
+This template ships with one such example - caching the classpath of your project.
 
 CMMA ships with bundled dependency management, but you can use any tool (Boot, Lein, Maven)
 to resolve dependencies - just [follow the examples](https://github.com/ohpauleez/cmma/tree/master/cmma-clj/examples).
