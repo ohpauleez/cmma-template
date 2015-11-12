@@ -15,7 +15,8 @@ From there you can manage dependencies with any tool you like (including CMMA).
 You can also remove the `Makefile.cmma` file and work directly in the main Makefile, if you prefer.
 
 If you use another tool (Boot, Leiningen, Maven) for dependency management and launching nREPL sessions,
-you can chop up the Makefile a bit and remove the CMMA JAR from your generated project.
+you can redefine `CMMA_CLASSPATH_BIN` and the `nrepl` task,
+and then remove the CMMA JAR - it's not used for anything else.
 
 ## License
 

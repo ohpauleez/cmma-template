@@ -6,6 +6,7 @@
                  :url "http://www.eclipse.org/legal/epl-v10.html"}}
  :dependencies [[org.clojure/clojure "1.8.0-RC1"]]
  :dev-dependencies []
+ :boot-dependencies []
  :repositories {"central" {:url "https://repo1.maven.org/maven2/"
                            :snapshots false}
                 "clojars" {:url "https://clojars.org/repo/"}
@@ -16,7 +17,9 @@
  :resource-paths ["resources"]
  :test-paths ["test"]
  ;; Optional: Any external tooling that needs to be configured along dep resolution
- ;:external {:nrepl-options {:bind "127.0.0.1"
- ;                           :reply true}}
- }
+ :external {:nrepl-options {:bind "127.0.0.1"
+                            :reply true}
+            :java-source-paths ["src/java"]
+            :javac-options ["-target" "1.8" "-source" "1.8"]
+            :main {{namespace}}.core}}
 

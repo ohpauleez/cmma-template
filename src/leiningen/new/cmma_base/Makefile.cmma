@@ -1,8 +1,8 @@
 
-# Please see the `examples` directory for using cmma with Lein or Maven
+# Please see CMMA's `examples` directory for using cmma with Boot, Lein, or Maven
 
 # Uncomment this for a caching classpath.
-# Note: You'll need to run `classpath` first to cache the classpath, before other commands like `repl`
+# Note: You'll need to run `make classpath` first to cache the classpath, before other tasks like `repl`
 #.classpath.cmma: project.edn
 #	@echo $(call cmmaclasspath) > .classpath.cmma
 #

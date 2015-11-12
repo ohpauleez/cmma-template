@@ -21,6 +21,10 @@
     (->files data
              ["README.md" (render "README.md" data)]
              ["project.edn" (render "project.edn" data)]
+             ["project.clj" (render "project.clj" data)]
+             ["build.boot" (render "build.boot" data)]
+             ["Dockerfile" (render "Dockerfile" data)]
+             ["Capstanfile" (render "Capstanfile" data)]
              ["Makefile" (render "Makefile" data)]
              ["Makefile.cmma" (render "Makefile.cmma" data)]
              ["bin/cmma-0.1.0-standalone.jar" (binary "cmma-0.1.0-standalone.jar")]

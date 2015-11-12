@@ -5,21 +5,35 @@ TODO: Description
 ## TODO: Template Notes
 
 The generated project uses Make and [CMMA](https://github.com/ohpauleez/cmma).
+You can optionally use Boot or Leiningen, both fed from the shared `project.edn` file.
 
-CMMA ships with bundled dependency management, but you can use any tool (lein, boot, maven)
-for resolve dependencies - just [follow the examples](https://github.com/ohpauleez/cmma/tree/master/cmma-clj/examples)
+You can redefine CMMA's behaviors (compilation, running namespaces, etc.) with
+environment variables, or redefining the Makefile variables (in either `Makefile` or `Makefile.cmma`)
+
+CMMA ships with bundled dependency management, but you can use any tool (Boot, Lein, Maven)
+to resolve dependencies - just [follow the examples](https://github.com/ohpauleez/cmma/tree/master/cmma-clj/examples).
+When using another tool, you can redefine the `nrepl` task in `Makefile.cmma` and remove the CMMA JAR from the project.
+
+This template also ships with Docker and OSv support.
 
 
 ## Tasks
 
-| Task                   |     CMMA      |   Leiningen    |
-|------------------------|---------------|----------------|
-| Launch a REPL          | `make repl`   |                |
-| Launch a Socket REPL   | `make srepl`  |                |
-| Launch a SREPL Client  | `make srepl-client`  |                |
-| Launch nREPL           | `make nrepl`  |  `lein repl`   |
+| Task                   |     CMMA       |   Leiningen      |     Boot     |
+|------------------------|----------------|------------------|--------------|
+| Launch a REPL          | `make repl`    |  `lein dumbrepl` |              |
+| Launch a Socket REPL   | `make srepl`   |                  |              |
+| Launch a SREPL Client  | `make srepl-client`   |           |              |
+| Launch nREPL           | `make nrepl`   |  `lein repl`     | `boot nrepl` |
+| Run tests              | Use Repl       |  `lein test`     | `boot test`  |
+| Build a deployable JAR | Use Java tools |  `lein build`    | `boot build` |
+| Compile Clojure files  | `make compile` |  `lein compile`  | `boot test`  |
+| Run `clojure.main`     | `make clj`     |                  |              |
+| Print classpath        | `make classpath` |  `lein classpath` | `boot show -c`  |
+| Run a namespace        | `make ns`      |  `lein run`      |              |
+| Generate API docs      |                |  `lein codox`    |              |
+| Generate literate docs |                |  `lein marg`     |              |
 
-There are tasks for compiling, running target namespaces, printing the classpath, and more
 
 ## License
 

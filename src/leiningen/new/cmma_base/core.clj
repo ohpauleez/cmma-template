@@ -4,3 +4,6 @@
 (defn hello []
   "hello")
 
+(defn -main [& args]
+  (hello))
+
