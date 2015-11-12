@@ -27,7 +27,7 @@ This template also ships with Docker and OSv support.
 | Launch nREPL           | `make nrepl`   |  `lein repl`     | `boot repl`  |
 | Run tests              | Use Repl       |  `lein test`     | `boot test`  |
 | Build a deployable JAR | Use Java tools |  `lein build`    | `boot build` |
-| Compile Clojure files  | `make compile` |  `lein compile`  | `boot test`  |
+| Compile Clojure files  | `make compile` |  `lein compile`  |              |
 | Run `clojure.main`     | `make clj`     |                  |              |
 | Print classpath        | `make classpath` |  `lein classpath` | `boot show -c`  |
 | Run a namespace        | `make ns`      |  `lein run`      |              |
